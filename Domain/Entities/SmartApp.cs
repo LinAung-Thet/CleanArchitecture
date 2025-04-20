@@ -15,6 +15,6 @@ public partial class SmartApp
     [StringLength(50)]
     public string AppName { get; set; } = null!;
 
-    //[InverseProperty("SmartApp")]
-    //public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+    [InverseProperty("SmartApp")]
+    public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }
