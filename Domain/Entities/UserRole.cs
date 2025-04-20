@@ -18,9 +18,9 @@ public partial class UserRole
 
     public int SmartAppId { get; set; }
 
-    //[ForeignKey("RoleId")]
-    //[InverseProperty("UserRoles")]
-    //public virtual Role Role { get; set; } = null!;
+    [ForeignKey("RoleId")]
+    [InverseProperty("UserRoles")]
+    public virtual Role Role { get; set; } = null!;
 
     [ForeignKey("SmartAppId")]
     [InverseProperty("UserRoles")]
