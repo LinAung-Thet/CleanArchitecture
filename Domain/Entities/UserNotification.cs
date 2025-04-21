@@ -26,9 +26,9 @@ public partial class UserNotification
 
     public DateTime CreatedOn { get; set; }
 
-    //[ForeignKey("NotificationId")]
-    //[InverseProperty("UserNotifications")]
-    //public virtual Notification Notification { get; set; } = null!;
+    [ForeignKey("NotificationId")]
+    [InverseProperty("UserNotifications")]
+    public virtual Notification Notification { get; set; } = null!;
 
     //[ForeignKey("UserId")]
     //[InverseProperty("UserNotifications")]

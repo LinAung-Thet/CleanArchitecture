@@ -22,6 +22,6 @@ public partial class Notification
 
     public bool IsActive { get; set; }
 
-    //[InverseProperty("Notification")]
-    //public virtual ICollection<UserNotification> UserNotifications { get; set; } = new List<UserNotification>();
+    [InverseProperty("Notification")]
+    public virtual ICollection<UserNotification> UserNotifications { get; set; } = new List<UserNotification>();
 }
