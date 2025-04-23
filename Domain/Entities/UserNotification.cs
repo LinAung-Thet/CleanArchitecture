@@ -30,7 +30,7 @@ public partial class UserNotification
     [InverseProperty("UserNotifications")]
     public virtual Notification Notification { get; set; } = null!;
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("UserNotifications")]
-    //public virtual UserProfile User { get; set; } = null!;
+    [ForeignKey("UserId")]
+    [InverseProperty("UserNotifications")]
+    public virtual UserProfile User { get; set; } = null!;
 }

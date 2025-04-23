@@ -41,8 +41,8 @@ public partial class UserProfile
     //[InverseProperty("User")]
     //public virtual ICollection<UserActivityLog> UserActivityLogs { get; set; } = new List<UserActivityLog>();
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<UserNotification> UserNotifications { get; set; } = new List<UserNotification>();
+    [InverseProperty("User")]
+    public virtual ICollection<UserNotification> UserNotifications { get; set; } = new List<UserNotification>();
 
     [InverseProperty("User")]
     public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
