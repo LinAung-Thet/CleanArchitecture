@@ -22,7 +22,7 @@ public partial class Choice
     //[InverseProperty("SelectedChoice")]
     //public virtual ICollection<ExamQuestion> ExamQuestions { get; set; } = new List<ExamQuestion>();
 
-    //[ForeignKey("QuestionId")]
-    //[InverseProperty("Choices")]
-    //public virtual Question Question { get; set; } = null!;
+    [ForeignKey("QuestionId")]
+    [InverseProperty("Choices")]
+    public virtual Question Question { get; set; } = null!;
 }
