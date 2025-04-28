@@ -29,6 +29,6 @@ public partial class Question
     //[InverseProperty("Questions")]
     //public virtual Course Course { get; set; } = null!;
 
-    //[InverseProperty("Question")]
-    //public virtual ICollection<ExamQuestion> ExamQuestions { get; set; } = new List<ExamQuestion>();
+    [InverseProperty("Question")]
+    public virtual ICollection<ExamQuestion> ExamQuestions { get; set; } = new List<ExamQuestion>();
 }

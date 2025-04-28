@@ -25,9 +25,9 @@ public partial class ExamQuestion
     //[InverseProperty("ExamQuestions")]
     //public virtual Exam Exam { get; set; } = null!;
 
-    //[ForeignKey("QuestionId")]
-    //[InverseProperty("ExamQuestions")]
-    //public virtual Question Question { get; set; } = null!;
+    [ForeignKey("QuestionId")]
+    [InverseProperty("ExamQuestions")]
+    public virtual Question Question { get; set; } = null!;
 
     //[ForeignKey("SelectedChoiceId")]
     //[InverseProperty("ExamQuestions")]
