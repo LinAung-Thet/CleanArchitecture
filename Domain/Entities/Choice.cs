@@ -19,8 +19,8 @@ public partial class Choice
 
     public bool IsCorrect { get; set; }
 
-    //[InverseProperty("SelectedChoice")]
-    //public virtual ICollection<ExamQuestion> ExamQuestions { get; set; } = new List<ExamQuestion>();
+    [InverseProperty("SelectedChoice")]
+    public virtual ICollection<ExamQuestion> ExamQuestions { get; set; } = new List<ExamQuestion>();
 
     [ForeignKey("QuestionId")]
     [InverseProperty("Choices")]

@@ -29,7 +29,7 @@ public partial class ExamQuestion
     [InverseProperty("ExamQuestions")]
     public virtual Question Question { get; set; } = null!;
 
-    //[ForeignKey("SelectedChoiceId")]
-    //[InverseProperty("ExamQuestions")]
-    //public virtual Choice? SelectedChoice { get; set; }
+    [ForeignKey("SelectedChoiceId")]
+    [InverseProperty("ExamQuestions")]
+    public virtual Choice? SelectedChoice { get; set; }
 }
