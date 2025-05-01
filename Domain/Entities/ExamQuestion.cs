@@ -21,9 +21,9 @@ public partial class ExamQuestion
 
     public bool? ReviewLater { get; set; }
 
-    //[ForeignKey("ExamId")]
-    //[InverseProperty("ExamQuestions")]
-    //public virtual Exam Exam { get; set; } = null!;
+    [ForeignKey("ExamId")]
+    [InverseProperty("ExamQuestions")]
+    public virtual Exam Exam { get; set; } = null!;
 
     [ForeignKey("QuestionId")]
     [InverseProperty("ExamQuestions")]
