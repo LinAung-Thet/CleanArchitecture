@@ -25,9 +25,9 @@ public partial class Exam
     [StringLength(2000)]
     public string? Feedback { get; set; }
 
-    //[ForeignKey("CourseId")]
-    //[InverseProperty("Exams")]
-    //public virtual Course Course { get; set; } = null!;
+    [ForeignKey("CourseId")]
+    [InverseProperty("Exams")]
+    public virtual Course Course { get; set; } = null!;
 
     [InverseProperty("Exam")]
     public virtual ICollection<ExamQuestion> ExamQuestions { get; set; } = new List<ExamQuestion>();
