@@ -25,9 +25,9 @@ public partial class Question
     [InverseProperty("Question")]
     public virtual ICollection<Choice> Choices { get; set; } = new List<Choice>();
 
-    //[ForeignKey("CourseId")]
-    //[InverseProperty("Questions")]
-    //public virtual Course Course { get; set; } = null!;
+    [ForeignKey("CourseId")]
+    [InverseProperty("Questions")]
+    public virtual Course Course { get; set; } = null!;
 
     [InverseProperty("Question")]
     public virtual ICollection<ExamQuestion> ExamQuestions { get; set; } = new List<ExamQuestion>();
