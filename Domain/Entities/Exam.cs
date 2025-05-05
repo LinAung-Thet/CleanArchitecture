@@ -32,7 +32,7 @@ public partial class Exam
     [InverseProperty("Exam")]
     public virtual ICollection<ExamQuestion> ExamQuestions { get; set; } = new List<ExamQuestion>();
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("Exams")]
-    //public virtual UserProfile User { get; set; } = null!;
+    [ForeignKey("UserId")]
+    [InverseProperty("Exams")]
+    public virtual UserProfile User { get; set; } = null!;
 }

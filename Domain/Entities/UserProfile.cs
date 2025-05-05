@@ -35,8 +35,8 @@ public partial class UserProfile
     //[InverseProperty("CreatedByNavigation")]
     //public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();
+    [InverseProperty("User")]
+    public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();
 
     //[InverseProperty("User")]
     //public virtual ICollection<UserActivityLog> UserActivityLogs { get; set; } = new List<UserActivityLog>();
