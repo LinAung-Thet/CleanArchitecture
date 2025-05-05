@@ -20,9 +20,9 @@ public partial class Course
 
     public DateTime CreatedOn { get; set; }
 
-    //[ForeignKey("CreatedBy")]
-    //[InverseProperty("Courses")]
-    //public virtual UserProfile CreatedByNavigation { get; set; } = null!;
+    [ForeignKey("CreatedBy")]
+    [InverseProperty("Courses")]
+    public virtual UserProfile CreatedByNavigation { get; set; } = null!;
 
     [InverseProperty("Course")]
     public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();

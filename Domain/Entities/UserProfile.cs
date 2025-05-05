@@ -32,8 +32,8 @@ public partial class UserProfile
 
     public DateTime CreatedOn { get; set; }
 
-    //[InverseProperty("CreatedByNavigation")]
-    //public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
+    [InverseProperty("CreatedByNavigation")]
+    public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
 
     [InverseProperty("User")]
     public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();
