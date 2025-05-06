@@ -38,8 +38,8 @@ public partial class UserProfile
     [InverseProperty("User")]
     public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<UserActivityLog> UserActivityLogs { get; set; } = new List<UserActivityLog>();
+    [InverseProperty("User")]
+    public virtual ICollection<UserActivityLog> UserActivityLogs { get; set; } = new List<UserActivityLog>();
 
     [InverseProperty("User")]
     public virtual ICollection<UserNotification> UserNotifications { get; set; } = new List<UserNotification>();

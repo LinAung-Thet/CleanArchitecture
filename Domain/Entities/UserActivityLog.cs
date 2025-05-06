@@ -22,7 +22,7 @@ public partial class UserActivityLog
     [Column(TypeName = "datetime")]
     public DateTime LogDate { get; set; }
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("UserActivityLogs")]
-    //public virtual UserProfile? User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("UserActivityLogs")]
+    public virtual UserProfile? User { get; set; }
 }
