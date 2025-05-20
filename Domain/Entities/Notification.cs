@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LSC.SmartCertify.Domain.Entities;
+namespace Domain.Entities;
 
 [Table("Notification")]
 public partial class Notification
