@@ -1,4 +1,4 @@
-﻿namespace LSC.SmartCertify.Application.Interfaces.Graph
+﻿namespace Application.Interfaces.Graph
 {
     public interface IGraphAuthService
     {
